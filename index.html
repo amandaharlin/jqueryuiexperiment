@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery Fun</title>
+    <link href="Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.0.3.js"></script>
+    <script src="Scripts/jquery-ui-1.10.3.js"></script>
+    <script src="Scripts/amandasplugin.js"></script>
+        <style>
+        .ui-stockGallery-slug {
+            float: left;
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+    </style>
+
+</head>
+
+
+
+
+<body>
+
+
+
+	
+
+       <div>
+        <h1>Kittens</h1>
+    </div>
+
+    <div class="kitten-gallery">
+    </div>
+
+    <div class="tweets">tweets</div>
+
+</body>
+<script>
+
+    var imageData = [{
+        width: 450,
+        name: "A pretty kitty"
+    }, {
+        width: 300,
+        name: "Another curious kitty"
+    }, {
+        width: 150,
+        name: "A third naughty kitty"
+    }, {
+        width: 250,
+        name: "A sneaky kitty"
+    }];
+
+
+    $(document).ready(function () {
+        $('.kitten-gallery').stockGallery({
+            value: imageData,
+            url: "http://placekitten.com",
+            widthHeightSeperator: "/",
+            height: 400,
+            padding: 3
+        });
+
+    });
+</script>
+</html>
